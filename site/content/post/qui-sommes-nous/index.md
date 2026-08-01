@@ -1,6 +1,6 @@
 ---
 title: 'Qui sommes-nous ?'
-date: 2026-08-01T09:00:00.000Z
+date: 2026-07-31T09:00:00.000Z
 description: >-
   Carri'AIR est une association loi 1901 qui fait découvrir les métiers,
   filières et carrières de l'aéronautique aux jeunes, aux publics en
