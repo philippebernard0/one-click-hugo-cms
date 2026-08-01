@@ -1,20 +1,19 @@
 ---
-title: "Great coffee with a conscience"
-subtitle: Support sustainable farming while enjoying a cup
-image: /img/home-jumbotron.jpg
+title: "Carri'AIR"
+subtitle: "Faire découvrir les métiers et les filières de l'aéronautique"
+image: /img/carriair-visite-ba115.jpg
 blurb:
-    heading: Why Kaldi?
-    text: "Kaldi is the coffee store for everyone who believes that great coffee shouldn't just taste good, it should do good too. We source all of our beans directly from small scale sustainable farmers and make sure part of the profits are reinvested in their communities."
+    heading: Association affiliée à la Fédération Française Aéronautique
+    text: "Il était une fois des hommes et des femmes passionnés d'aéronautique qui voulaient transmettre leur passion du vol, des aéronefs et des airs. Ils se sont réunis et ont décidé de créer une association qui porterait cette passion, permettrait de l'incarner, de la faire grandir et de la transmettre aux plus jeunes."
 intro:
-    heading: "What we offer"
-    text: "Kaldi is the ultimate spot for coffee lovers who want to learn about their java’s origin and support the farmers that grew it. We take coffee production, roasting and brewing seriously and we’re glad to pass that knowledge to anyone."
+    heading: "Notre mission"
+    text: "Promouvoir les métiers, filières d'études et carrières du secteur aéronautique — civil et militaire — auprès des jeunes, des publics en difficulté d'insertion et des personnes en situation de handicap."
 products:
-    - image: img/illustrations-coffee.svg
-      text: "We sell green and roasted coffee beans that are sourced directly from independent farmers and farm cooperatives. We’re proud to offer a variety of coffee beans grown with great care for the environment and local communities. Check our post or contact us directly for current availability."
-    - image: /img/illustrations-coffee-gear.svg
-      text: "We offer a small, but carefully curated selection of brewing gear and tools for every taste and experience level. No matter if you roast your own beans or just bought your first french press, you’ll find a gadget to fall in love with in our shop."
+    - image: /img/carriair-aeronefs.jpg
+      text: "Découverte des aéronefs : réunir sur une même plateforme la plus grande diversité d'aéronefs existants pour illustrer concrètement l'enseignement théorique du BIA. Avions, planeurs, jusqu'à 5 catégories d'ULM, drones, parachutes et hélicoptères."
+    - image: /img/carriair-petite-aile.jpg
+      text: "Une petite Aile en PLUS : permettre à des personnes en situation de handicap de vivre l'expérience d'un vol en aéronef. En 2024, près de 80 personnes ont pu voler grâce à la mobilisation de 5 structures ULM et de deux aéroclubs."
 values:
-    heading: Our values
-    text: Coffee is an amazing part of human culture but it has a dark side too – one of colonialism and mindless abuse of natural resources and human lives. We want to turn this around and return the coffee trade to the drink’s exhilarating, empowering and unifying nature.
+    heading: Nos objectifs
+    text: "Promouvoir les métiers de l'aéronautique auprès des publics jeunes et d'insertion, créer du lien avec les opérateurs du secteur, être catalyseur de passion pour permettre la construction d'un projet professionnel, et contribuer à l'image de nos plateformes comme vecteur d'éducation, de transmission et de partage."
 ---
-

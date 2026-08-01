@@ -2,18 +2,14 @@
 title: "Contact"
 logo: "/img/logo.png"
 contact_entries:
-  - heading: Location
-    text: "3153 Lynn Avenue, South San Francisco, California 94080"
-  - heading: Working hours
-    text: "Monday – Saturday: 9AM – 7PM We’re closed on Sundays"
+  - heading: Siège social
+    text: "Aérodrome Ventoux Provence — 232 chemin de Saint Gens, 84210 Pernes-les-Fontaines"
+  - heading: Email
+    text: "alexis.mayer@carriair-asso.fr"
+  - heading: Statut
+    text: "Association loi 1901 — SIRET 84437225000010"
 ---
 
-We’d love to get in touch with you and hear your ideas and
-questions. We strive to grow and improve constantly and your feedback
-is valuable for us.
+**CARRI'AIR**
 
-<h3 class="f4 b lh-title mb2">How can I get…?</h3>
-
-You can also use the form below for any inquiries about coffee
-availability, monthly subscriptions and scheduling a 1-on-1 session
-with our baristas. Don’t be shy, drop us a line!
+Association loi 1901 affiliée à la Fédération Française Aéronautique.

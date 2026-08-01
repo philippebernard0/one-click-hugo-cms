@@ -3,104 +3,112 @@ backend:
   branch: main
 
 media_folder: "site/static/img" # Folder where user uploaded files should go
-public_folder: "img"
+public_folder: "/img"
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
-    folder: "site/content/post" # The path to the folder where the documents are stored
-    path: "{{slug}}/index" # Each document is inside a folder with the slug name.
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
+  - name: "post"
+    label: "Actualités"
+    label_singular: "Actualité"
+    folder: "site/content/post"
+    path: "{{slug}}/index"
+    create: true
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Date de publication", name: "date", widget: "datetime"}
+      - {label: "Chapô", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Contenu", name: "body", widget: "markdown"}
+
   - name: "pages"
     label: "Pages"
     files:
       - file: "site/content/_index.md"
-        label: "Home Page"
+        label: "Accueil"
         name: "home"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: "Blurb", name: blurb, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Intro", name: intro, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Products", name: products, widget: list, fields: [
+          - {label: Titre, name: title, widget: string}
+          - {label: Sous-titre, name: subtitle, widget: string}
+          - {label: Image de bandeau, name: image, widget: image}
+          - {label: "Encart d'introduction", name: blurb, widget: object, fields: [
+              {label: "Titre", name: "heading", widget: string},
+              {label: "Texte", name: "text", widget: "text"}]}
+          - {label: "Mission", name: intro, widget: object, fields: [
+              {label: "Titre", name: "heading", widget: string},
+              {label: "Texte", name: "text", widget: "text"}]}
+          - {label: "Actions mises en avant", name: products, widget: list, fields: [
               {label: "Image", name: "image", widget: "image"},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Values", name: "values", widget: "object", fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
+              {label: "Texte", name: "text", widget: "text"}]}
+          - {label: "Objectifs", name: "values", widget: "object", fields: [
+              {label: "Titre", name: "heading", widget: string},
+              {label: "Texte", name: "text", widget: "text"}]}
+
+      - file: "site/content/qui-sommes-nous.md"
+        label: "Qui sommes-nous ?"
+        name: "qui-sommes-nous"
+        fields:
+          - {label: Titre, name: title, widget: string}
+          - {label: Sous-titre, name: subtitle, widget: string, required: false}
+          - {label: Image de bandeau, name: image, widget: image, required: false}
+          - {label: Contenu, name: body, widget: markdown}
+
+      - file: "site/content/nos-actions.md"
+        label: "Nos actions"
+        name: "nos-actions"
+        fields:
+          - {label: Titre, name: title, widget: string}
+          - {label: Sous-titre, name: subtitle, widget: string, required: false}
+          - {label: Image de bandeau, name: image, widget: image, required: false}
+          - {label: Contenu, name: body, widget: markdown}
+
+      - file: "site/content/ils-parlent-de-nous.md"
+        label: "Ils parlent de nous"
+        name: "ils-parlent-de-nous"
+        fields:
+          - {label: Titre, name: title, widget: string}
+          - {label: Sous-titre, name: subtitle, widget: string, required: false}
+          - {label: Image de bandeau, name: image, widget: image, required: false}
+          - {label: Contenu, name: body, widget: markdown}
+
       - file: "site/content/contact/_index.md"
-        label: "Contact Page"
+        label: "Contact"
         name: "contact"
         fields:
-          - {label: Title, name: title, widget: string}
+          - {label: Titre, name: title, widget: string}
           - {label: Logo, name: logo, widget: image}
-          - {label: Body, name: body, widget: markdown}
-          - label: Contact Entries
+          - {label: Contenu, name: body, widget: markdown}
+          - label: Coordonnées
             name: contact_entries
             widget: list
             fields:
-              - label: Heading
+              - label: Intitulé
                 name: heading
                 widget: string
-              - label: Text
+              - label: Texte
                 name: text
                 widget: text
-      - file: "site/content/products/_index.md"
-        label: "Products Page"
-        name: "products"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
-      - file: "site/content/values/_index.md"
-        label: "Values Page"
-        name: "values"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - label: Values
-            name: values
-            widget: list
-            fields:
-              - {label: Heading, name: heading, widget: string}
-              - {label: Text, name: text, widget: text}
-              - {label: Image, name: imageUrl, widget: image}
+
   - name: "site_settings"
-    label: "Site Settings"
+    label: "Réglages du site"
     files:
       - file: "site/data/footer.json"
-        label: Footer
+        label: Pied de page
         name: footer
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Blurb, name: blurb, widget: text}
+          - {label: Titre, name: title, widget: string}
+          - {label: Texte, name: blurb, widget: text}
+
       - file: "site/hugo.toml"
-        label: Hugo Config
+        label: Configuration Hugo
         name: config
         editor:
           preview: false
         fields:
-          - {label: Site Title for Browser Tab, name: title, widget: string}
+          - {label: "Titre du site (onglet du navigateur)", name: title, widget: string}
           - label: Params
             name: params
             widget: object
             fields:
-              - label: Open Graph Image
+              - label: Image Open Graph
                 name: images
                 widget: list
                 field: { label: Image, name: image, widget: image }
